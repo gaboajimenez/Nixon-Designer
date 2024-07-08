@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      rel="icon"
+      type="image/jpeg"
+      class="w-[16px] h-[16px]"
+      href="/img/logo.jpeg"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body class="h-screen bg-gradient-to-tl from-neutral-700 to-red-600">
+    <nav
+      id="navegacion"
+      class="bg-neutral-800 p-4 text-white grid grid-flow-col py-3"
+    ></nav>
+
+    <div id="notificacion" class=""></div>
+
+    <div class="w-screen grid place-items-center h-4/5">
+      <div
+        class="bg-neutral-700 h-auto py-6 md:p-0 md:h-2/4 w-2/5 rounded grid place-items-center"
+      >
+        <form id="formulario" class="w-5/6 h-auto flex flex-col gap-5">
+          <div class="flex flex-col w-full gap-10">
+            <div class="flex flex-col gap-4">
+              <label class="text-white" for="usuario">Usuario</label>
+              <input
+                class="bg-neutral-800/50 rounded px-3 py-1 w-full"
+                type="text"
+                name=""
+                id="usuario"
+              />
+            </div>
+            <div class="flex flex-col gap-4">
+              <label class="text-white" for="password">Contraseña</label>
+              <input
+                placeholder="•••••••••••••"
+                class="bg-neutral-800/50 rounded px-3 py-1 w-full"
+                type="password"
+                name=""
+                id="password"
+              />
+            </div>
+          </div>
+
+          <div class="self-center">
+            <button
+              class="bg-neutral-500 mt-5 py-2 px-5 rounded transition ease-in-out hover:text-white hover:bg-neutral-600"
+              type="submit"
+            >
+              Aceptar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer class="w-screen text-center bg-black p-3">
+      <p class="text-center text-white font-bold text-[20px]">Nixon Designer</p>
+      <a class="flex justify-center" href="/">
+        <img
+          class="object-cover w-[74px] h-[40px] md:object-cover md:w-[80px] md:h-[60px]"
+          src="/img/logo.jpeg"
+          alt=""
+        />
+      </a>
+    </footer>
+
+    <script src="js/index.js" type="module"></script>
+    <script src="../components/nav.js"></script>
+  </body>
+</html>

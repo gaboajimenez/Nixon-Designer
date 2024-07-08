@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nixon Designer</title>
+    <link rel="icon" type="image/jpeg" class="w-[16px] h-[16px]" href= "/img/logo.jpeg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body class="grid bg-gradient-to-tl from-neutral-700 to-red-600">
+    <!--
+    <nav
+      class="bg-neutral-800 p-4 text-white grid grid-flow-col py-3"
+    >
+    <a  href="/" class="place-self-start mt-1">
+      <img class="object-cover w-[74px] h-[40px] md:object-cover md:w-[80px] md:h-[60px]" src="/img/logo.jpeg">
+    </a>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-12 h-12 place-self-end cursor-pointer md:hidden rounded p-2"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        />
+      </svg>
+      <div class="place-self-end mr-5 hidden gap-5 md:flex">
+        <a
+        class="hidden md:block transition ease-in-out font-bold mt-2 hover:text-neutral-600"
+        href="#servicios"
+        >Mis Servicios</a
+        >
+        <a
+        class="hidden md:block transition ease-in-out font-bold mt-2 hover:text-neutral-600"
+        href="#quien-soy"
+        >Quien Soy</a
+        >
+        <a
+          class="hidden md:block transition ease-in-out font-bold mt-2 hover:text-neutral-600"
+          href="#contacto"
+          >Contacto</a
+        >
+
+        <a
+          class="hidden md:block transition ease-in-out font-bold bg-red-600 py-2 px-4 rounded hover:bg-red-900 hover:text-white"
+          href="/Login/"
+          >Login</a
+        >
+        <a
+          class="hidden md:block transition ease-in-out font-bold bg-red-600 py-2 px-4 rounded hover:bg-red-900 hover:text-white"
+          href="/Register/"
+          >Register</a
+        >
+      </div>
+      <div
+        class="hidden top-16 bottom-0 navegacion right-0 left-0 fixed bg-black gap-3 flex-col items-center justify-center"
+      >
+        <div>
+          <a
+            class="block transition ease-in-out font-bold text-neutral-600  py-2 px-4 rounded hover:text-white"
+            href="/"
+            >Inicio</a
+          >
+        </div>
+        <div>
+          <a
+            class="block transition ease-in-out font-bold hover:text-white"
+            href="#quien-soy"
+            >Quien Soy</a
+            >
+        </div>
+        <div>
+          <a
+            class="block transition ease-in-out font-bold hover:text-white"
+            href="#contacto"
+            >Contacto</a
+          >
+        </div>
+        <div>
+          <a
+            class="block transition ease-in-out font-bold bg-red-600 py-2 px-4 rounded hover:bg-red-900 hover:text-white"
+            href="/Login/"
+            >Login</a
+          >
+        </div>
+        <div>
+          <a
+            class="block transition ease-in-out font-bold bg-red-600 py-2 px-4 rounded hover:bg-red-900 hover:text-white"
+            href="/Register/"
+            >Register</a
+          >
+        </div>
+      </div>
+    </nav>
+    *//
+    -->
+      
+    <nav
+      id="navegacion"
+      class="bg-neutral-800 p-4 text-white grid grid-flow-col py-3"
+    ></nav>
+
+    
+    <section id="quien-soy" class=" grid-columns-2 md:flex justify-between mb-0  " >
+      <div class=" mt-5 m-auto shadow-md shadow-neutral-300 w-[80%] md:w-[40%] h-auto">
+        <h1 class="font-bold text-white text-[46px] ml-3 ">¿Quien <br>Soy Yo?</h1>
+        <p class="font-bold text-[16px] ml-3 mr-3 p-4 md:text-[20px]">Soy editor y diseñador. Especializado en branding, diseño
+          y comunicacion digital. Buscando siempre ideas creativas e innovadoras que generen resultados tangibles.<br><br>
+          Con una trayectoria de 6 años en el mercado, trabajando como diseñador para grandes empresas,
+          donde pude ampliar mi gama de clientes y por supuesto conocimientos, brindando servicios a grandes,
+          medianas y pequeñas empresas.
+        </p>
+      </div>
+    
+        <div class=" mt-5 m-auto w-[80%] md:w-[35%] md:ml-3 h-screen">
+          <img src="/img/nixon-min (1).png" alt="">
+        </div>
+    </section>
+      <h2 class="text-white bg-black text-center text-[36px] font-bold">Servicios Que Proporciono</h2>
+      <div id="servicios" class="grid-cols-1 bg-black  m-auto md:gap-10 ">
+
+        
+        <div class=" mb-0 m-4 shadow-md md:flex justify-between shadow-neutral-400">
+          
+            
+            
+            <div class="mt-5 m-auto  w-[80%] md:w-[40%] h-auto">
+              <p class="text-white ml-3 font-bold md:text-[26px] text-[24px] ">Diseño Grafico</p>
+              <br><br>
+              <p class="font-bold text-white text-[18px] ml-3 mr-3 p-4 md:text-[20px]">¡Déjame materializar tu visión creativa! En nuestro estudio de diseño gráfico,
+                 nos especializamos en plasmar tus ideas y conceptos en piezas visuales impactantes y memorables. Desde la creación de logotipos únicos hasta el diseño de folletos,
+                 tarjetas de presentación y mucho más,
+                estamos aquí para ayudarte a destacar en un mundo visualmente competitivo. 
+                ¡Contáctanos hoy para comenzar a dar vida a tus proyectos!
+              </p>
+            </div>
+            <div class=" mt-10 md:mt-16 m-auto w-[80%] md:w-[35%] md:ml-3 h-screen">
+              <img class="" src="/img/diseñador (1).jpg" alt="">
+            </div>
+        </div>
+        
+        <div class=" mb-0 m-4 shadow-md md:flex justify-between shadow-neutral-400">
+        
+          <div class="mt-5 m-auto  w-[80%] md:w-[40%] h-auto">
+            <p class="text-white ml-3 font-bold md:text-[26px] text-[24px] ">Gestion De Marca</p>
+            <br><br>
+            <p class="font-bold text-white text-[18px] ml-3 mr-3 p-4 md:text-[20px]">Potencia el valor de tu marca 
+              con nuestro servicio de gestión integral. En nuestra agencia, nos 
+              especializamos en construir y fortalecer la identidad de tu marca, 
+              asegurando una presencia coherente y atractiva en todos los puntos de 
+              contacto con tus clientes. Desde el desarrollo de estrategias de branding 
+              hasta la creación de contenido y gestión de redes sociales, estamos aquí 
+              para impulsar el reconocimiento y la lealtad hacia tu marca. 
+              ¡Confía en nosotros para llevar tu marca al siguiente nivel!
+            </p>
+          </div>
+          <div class=" mt-10 md:mt-16 m-auto w-[80%] md:w-[35%] md:ml-3 h-screen">
+            <img class="" src="/img/branding (1).jpg" alt="">
+          </div>
+        </div>
+        
+        <div class=" mb-0 m-4 shadow-md md:flex justify-between shadow-neutral-400">
+        
+          <div class="mt-5 m-auto  w-[80%] md:w-[40%] h-auto">
+            <p class="text-white ml-3 font-bold md:text-[26px] text-[24px] ">Comunicacion Digital</p>
+            <br><br>
+            <p class="font-bold text-white text-[18px] ml-3 mr-3 p-4 md:text-[20px]">¡Potencia la presencia 
+              online de tu negocio con nuestro servicio de comunicación digital!
+               En nuestra agencia, nos especializamos en crear estrategias efectivas 
+               para llegar a tu audiencia de manera impactante y relevante en el entorno digital.
+               Desde la gestión de redes sociales hasta la creación de contenido atractivo y la implementación
+                de campañas publicitarias, estamos aquí para impulsar tu marca y aumentar tu visibilidad 
+                online. Confía en nosotros para llevar 
+              tu comunicación digital al siguiente nivel y destacar en un mundo cada vez más conectado.
+            </p>
+          </div>
+          <div class=" mt-10 md:mt-16 m-auto w-[80%] md:w-[35%] md:ml-3 h-screen">
+            <img class="" src="/img/comunicacion (2).jpg" alt="">
+          </div>
+        </div>
+      
+    
+    <section id="contacto" class="grid-cols-1 bg-gradient-to-tl from-neutral-700 to-red-600 justify-center h-screen">
+      <h1 class="text-black text-center font-bold text-[36px] border-b-2 border-neutral-400">Contactanos</h1>
+    
+      <div class="mt-4 mb-3 border-b-2 border-neutral-400"><h2 class="text-white mb-6 text-center font-bold text-[24px]">Contactanos por Whatsapp</h2>
+          <a class="mt-6 mb-3 " href="https://wa.me/+5804142685307">
+        
+            <img class="m-auto mb-3" src="https://static.whatsapp.net/rsrc.php/v3/yJ/r/Qhrnh5evyPV.png" alt="">
+          </a>      
+      </div>
+      <div class="mt-4 mb-3 border-b-2 border-neutral-400"><h2 class="text-white mb-6 text-center font-bold text-[24px]">Mira Nuestro Instagram</h2>
+        <a  class="justify-center text-center text-white font-serif text-[36px]" href="https://www.instagram.com/nixondesigner_/">
+          <img class="m-auto w-20 h-20 mb-3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgeQuJ4elfJMPIKKxi4qcS4sWIcNGl641pjQ&s" alt="">
+        </a>  
+        <div class="text-center m-auto">
+          <a class="font-bold text-black text-[20px] m-auto text-center" href="https://www.instagram.com/nixondesigner_/">
+            @nixondesigner_
+          </a>
+        </div>
+      </div>
+      <div class="mt-4 mb-3 border-b-2 border-neutral-400"><h2 class="text-white mb-6 text-center font-bold text-[24px]">Escribeme al Correo</h2>
+        <a  class="justify-center text-center text-white font-serif text-[36px]" href="https://www.instagram.com/nixondesigner_/">
+          <img class="m-auto w-20 h-20 mb-3" src="data:image/png;base64,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" alt="">
+        </a> 
+        <div class="text-center m-auto">
+          <a class="font-bold text-black text-[20px] m-auto text-center" href="nixondesignergraphic@gmail.com">
+            nixondesignergraphic@gmail.com
+          </a>
+        </div> 
+      </div>  
+    </section>
+    
+    <footer class="w-screen text-center bg-black p-3" >
+      <p class="text-center text-white font-bold text-[20px]">Nixon Designer</p>
+      <a class="flex justify-center" href="/">
+        <img class="object-cover w-[74px] h-[40px] md:object-cover md:w-[80px] md:h-[60px]" src="/img/logo.jpeg" alt="">
+      </a>
+
+    </footer>
+    <script src="../components/nav.js"></script>
+    <script src="index.js"></script>
+    
+  </body>
+</html>
