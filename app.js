@@ -23,6 +23,7 @@ app.use("/", express.static(path.resolve("views", "home")));
 app.use("/Login", express.static(path.resolve("views", "login")));
 app.use("/components", express.static(path.resolve("views", "components")));
 app.use("/Register", express.static(path.resolve("views", "registro")));
+app.use("/administrador", express.static(path.resolve("views", "administrador")));
 
 
 // rutas back
