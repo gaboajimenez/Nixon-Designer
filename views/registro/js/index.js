@@ -83,6 +83,7 @@ formulario.addEventListener("submit", async (e) => {
     const post = await axios.post("/api/users/registro", newUser);
     //alert(post.data.mensaje)
     createNotificacion(false, post.data.mensaje);
+    window.location.href  = "/Login"
   } catch (error) {
     console.log(error);
     createNotificacion(true, error.response.data.error);
