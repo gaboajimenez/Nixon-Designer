@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador</title>
+    <link rel="icon" type="image/jpeg" class="w-[16px] h-[16px]" href= "/img/logo.jpeg">
+    <link rel="stylesheet" href="css/tailwind.min.css">
+</head>
+<body class="min-h-100 bg-neutral-700">
+    <div class="md:flex min-h-screen md:align-top">
+        <aside class="md:w-2/5 lg:w-2/5 xl:w-1/5 bg-black px-5 py-10">
+            <h1 class="uppercase text-white tracking-wide text-2xl  font-bold mt-2">Administrador De Planes </h1>
+            <p class="mt-10 text-white">Administra tus planes</p>
+            <nav class="mt-8">
+                <a  
+                    href="index.html" 
+                    class="px-3 py-1 text-white block hover:bg-red-700 hover:text-black bg-neutral-700 "
+                >Planes</a>
+                <a 
+                    href="nuevo-cliente.html" 
+                    class="px-3 py-1 text-black block hover:bg-red-700 hover:text-black bg-red-700"
+                >Nuevos Planes</a>
+            </nav>
+        </aside> <!--sidebar-->
+        <main class="md:w-3/5  xl:w-4/5 px-5 py-10 bg-gray-200">
+            <h2 class="text-3xl font-light text-center">Nuevo plan</h2>
+
+            <div class="flex flex-col mt-10 items-center">
+                <div class="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 w-10/12 md:w-8/12 lg:w-6/12">
+                    <div class=" shadow overflow-hidden sm:rounded-lg border-b border-gray-200 ">
+                        <form id="formulario" class="bg-white p-3" method="POST">
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="nombre">Nombre</label>
+                                <input 
+                                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    id="nombre"
+                                    name="nombre"
+                                    type="text"
+                                    placeholder="Nombre Plan"
+                                />
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="precio">Precio</label>
+                                <input 
+                                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    id="precio"
+                                    name="precio"
+                                    type="precio"
+                                    placeholder="Precio Del Plan"
+                                />
+                            </div>
+
+                           
+
+                            <input
+                                type="submit"
+                                class="bg-black cursor-pointer hover:bg-red-700 w-full mt-5 p-2 text-white uppercase font-bold"
+                                value="Agregar Producto"
+                            />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer class="w-screen text-center bg-black p-3" >
+        <p class="text-center text-white font-bold text-[20px]">Nixon Designer</p>
+        <a class="flex justify-center" href="/">
+          <img class="object-cover w-[74px] h-[40px] md:object-cover md:w-[80px] md:h-[60px]" src="/img/logo.jpeg" alt="">
+        </a>
+  
+      </footer>
+    
+    <script src="js/nuevoproducto.js" type="module"></script>
+</body>
+</html>

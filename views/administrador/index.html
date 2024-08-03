@@ -2,23 +2,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nixon Designer</title>
+    <title>Administrador</title>
     <link rel="icon" type="image/jpeg" class="w-[16px] h-[16px]" href= "/img/logo.jpeg">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body class="grid bg-gradient-to-tl from-neutral-700 to-red-600">
-    <nav
-      id="navegacion"
-      class="bg-neutral-800 p-4 text-white grid grid-flow-col py-3"
-    ></nav>
-    <footer class="w-screen text-center bg-black p-3" >
-        <p class="text-center text-white font-bold text-[20px]">Nixon Designer</p>
-        <a class="flex justify-center" href="/">
-          <img class="object-cover w-[74px] h-[40px] md:object-cover md:w-[80px] md:h-[60px]" src="/img/logo.jpeg" alt="">
-        </a>
-  
-      </footer>
-      <script src="../components/nav.js"></script>    
+  <div class="md:flex min-h-screen md:align-top">
+    <aside class="md:w-2/5 lg:w-2/5 xl:w-1/5 bg-black px-5 py-10">
+        <h1 class="uppercase text-white tracking-wide text-2xl  font-bold mt-2">Administrador De Planes</h1>
+        <p class="mt-10 text-white">Administra tus Planes</p>
+        <nav class="mt-8">
+            <a  
+                href="/" 
+                class="px-3 py-1 text-black block hover:bg-red-700 hover:text-black bg-red-700"
+            >Planes</a>
+            <a 
+                href="nuevo-producto.html" 
+                class="px-3 py-1 text-white block hover:bg-red-700 hover:text-black bg-black"
+            >Nuevos Planes </a>
+        </nav>
+    </aside> <!--sidebar-->
+    <main class="md:w-3/5  xl:w-4/5 px-5 py-10 bg-gray-200">
+        
+
+        
+
+        <h2 class="text-3xl font-bold text-center">Planes</h2>
+
+        <div class="flex flex-col mt-10">
+            <div class="py-2 overflow-x-auto">
+              <div class="align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200">
+                <table class="min-w-full">
+                    <thead class="bg-gray-100 ">
+                        <tr>
+                            <th class="px-6 py-3 border-b border-gray-200  text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
+                                    Nombre Plan
+                            </th>
+                            <th class="px-6 py-3 border-b border-gray-200  text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
+                                    Precio
+                            </th>
+                           
+                        </tr>
+                    </thead>
+                    <tbody id="listado-Productos" class="bg-white"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+         
+
+       </main>
+
+       
+
+</div>
+<footer class="w-screen text-center bg-black p-3" >
+  <p class="text-center text-white font-bold text-[20px]">Nixon Designer</p>
+  <a class="flex justify-center" href="/">
+    <img class="object-cover w-[74px] h-[40px] md:object-cover md:w-[80px] md:h-[60px]" src="/img/logo.jpeg" alt="">
+  </a>
+
+</footer>
+<script src="../admin/js/api.js"></script>
+<script src="../admin/js/index.js" type="module"></script>   
 </body>
 </html>
