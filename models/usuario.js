@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const userRouter = require("../controllers/usuarios");
+
 
 const user = new mongoose.Schema({
   usuario: String,
@@ -11,6 +11,7 @@ const user = new mongoose.Schema({
     default: false,
   },
 });
+
 
 //respuesta del usuario en el esquema
 

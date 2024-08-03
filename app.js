@@ -4,6 +4,7 @@ const app = express();
 const path = require("path");
 const mongoose = require("mongoose");
 const userRouter = require("./controllers/usuarios");
+const planRouter = require("./controllers/planes")
 
 async function conectarDB() {
   try {
@@ -29,7 +30,10 @@ app.use("/administrador", express.static(path.resolve("views", "administrador"))
 // rutas back
 app.use("/img",express.static(path.resolve("img")))
 app.use("/controllers", express.static(path.resolve("controllers")));
+console.log('hola')
 app.use("/api/users", userRouter);
+console.log('bien')
+app.use("/api/plans", planRouter);
 
 
 

@@ -67,3 +67,4 @@ userRouter.get("/consultar-usuario", async (req, res) => {
 });
 
 module.exports = userRouter;
+

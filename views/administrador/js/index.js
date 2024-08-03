@@ -22,7 +22,7 @@ async function cargarProductos(){
        <td class="px-6 py-4 border-b border-gray-200"> <p class="text-center">${precio}</p> </td>
 
        <td class="px-6 py-4 border-b border-gray-200">
-       <a href="editar-producto.html?id=${id}" class="text-teal-400 font-bold hover: text-teal-900"> Editar <a>
+       <a href="editar-producto.html?id=${id}" class="text-neutral-400 font-bold hover: text-teal-900"> Editar <a>
        <a href="#" class="text-red-400 font-bold hover: text-red-900 eliminar"  data-producto="${id}"> Eliminar <a>
        </td>
         `
