@@ -2,15 +2,24 @@
 
 //<script src="index.js" type="module"></script> para exportar de otro script
 
-import {consultarProductos, eliminarProducto} from "../controller/api.js"
 
 const listado = document.querySelector('#listado-Productos');
 
-document.addEventListener('DOMContentLoaded', cargarProductos)
+document.addEventListener('DOMContentLoaded', mostrarHtml)
 listado.addEventListener('click', confirmarEliminar)
 
-async function cargarProductos(){
-    const listadoProductos = await consultarProductos()
+async function consulta(){
+    try{
+        const listado =  await axios.get('/api/plans/listado')
+        const {data} = listado
+        return data
+    }catch (error) {
+        console.log(error)
+      }
+}
+
+async function mostrarHtml(){
+    const listadoProductos = await consulta()
     console.log(listadoProductos);
 
     listadoProductos.forEach(i => {
@@ -18,12 +27,12 @@ async function cargarProductos(){
 
         const row = document.createElement('tr')
         row.innerHTML = `
-       <td class="px-6 py-4 border-b border-gray-200"> <p class="font-bold">${nombre}</p> </td>
-       <td class="px-6 py-4 border-b border-gray-200"> <p class="text-center">${precio}</p> </td>
+       <td class="px-6 py-4 border-b border-gray-200"> <p class="font-bold text-black">${nombre}</p> </td>
+       <td class="px-6 py-4 border-b border-gray-200"> <p class="text-center text-black">${precio}</p> </td>
 
        <td class="px-6 py-4 border-b border-gray-200">
-       <a href="editar-producto.html?id=${id}" class="text-neutral-400 font-bold hover: text-teal-900"> Editar <a>
-       <a href="#" class="text-red-400 font-bold hover: text-red-900 eliminar"  data-producto="${id}"> Eliminar <a>
+       
+       <a href="#" class="text-red-400 font-bold hover: eliminar"  data-producto="${id}"> Eliminar <a>
        </td>
         `
         listado.appendChild(row)
@@ -42,9 +51,21 @@ async function confirmarEliminar(e){
      console.log(productoId)
 
     if (confirmar){
-       
-        await eliminarProducto(productoId)
+       try{
+        await borrar(productoId)
+        const row = e.target.closest('tr')
+        row.remove()
+       }catch (error) {
+        console.log(error)
+      }
      
   }
 }
+}
+async function borrar(id){
+    try{
+         await axios.delete(`/api/plans/delete/${id}`)
+    }catch (error) {
+        console.log(error)
+      }
 }
